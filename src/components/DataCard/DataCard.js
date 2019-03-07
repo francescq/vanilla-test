@@ -1,16 +1,29 @@
+import * as d3 from 'd3';
+
 import './DataCard.css';
 import template from './DataCard.template';
-console.log('DataCard has been loaded');
 
-const DataContainer = (props) => {
-    let dataContainer = document.createElement('div');
+class DataContainer {
+
+    constructor(props) {
+        this.props = props;
+    }
+
+    render() {
+        let dataContainer = document.createElement('div');
     
-    dataContainer.innerHTML = ['Data', 'Card', props.val].join();
-    dataContainer.classList.add('card-container');
+        dataContainer.innerHTML = ['Data', 'Card', this.props.val].join();
+        dataContainer.classList.add('card-container');
+    
+        dataContainer.insertAdjacentHTML("afterbegin", template(this.props));
 
-    dataContainer.insertAdjacentHTML("afterbegin", template(props));
+        return dataContainer;
+    }
 
-    return dataContainer;
+    playWithCircle() {
+        var dt = new DashTimer('#timer').init().setData().start();
+    }
+
 }
 
 export default DataContainer;
