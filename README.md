@@ -1,1 +1,3 @@
 # vanilla-test
+
+npm install

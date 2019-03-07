@@ -1,0 +1,100 @@
+
+$heading-Dark: #6E6E6E;
+$heading-Light: #CECECE;
+
+.theme-visits {
+    .phone {
+        .title {
+            color: #B35D30
+        }
+    }
+    .tablet {
+        .title {
+            color:#E9C451;
+        }
+    }
+}
+
+.theme-impressions {
+    .phone {
+        .title {
+            color: #335161
+        }
+    }
+    .tablet {
+        .title {
+            color:#86C7E4;
+        }
+    }
+}
+
+.theme-revenue {
+    .phone {
+        .title {
+            color: #456722
+        }
+    }
+    .tablet {
+        .title {
+            color:#99CF5B;
+        }
+    }
+}
+
+.card-container {
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: auto auto;
+    border-bottom: 2px solid $heading-Light;
+    min-height: 200px;
+    min-width: 300px;
+    padding: 8px;
+}
+
+.header {
+    grid-column-start: 1;
+    grid-column-end: 3; 
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+
+    .title {
+        color: $heading-Light
+    }
+
+    .value {
+        color: $heading-Dark;
+        font-size: 20px;
+    }
+}
+
+.device{
+    align-self: self-end;
+
+    .title {
+        font-weight: bold;
+    }
+
+    .value {
+        color: $heading-Light;
+    } 
+
+    .perc {
+        color: $heading-Dark; 
+    }  
+} 
+
+.phone {
+    text-align:right;
+} 
+
+.tablet {
+    text-align:left;
+}
+
+
+
+
+
+
+
