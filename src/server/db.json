@@ -1,8 +1,8 @@
 {
     "reports": [
         { "id": 0, "type": "revenue", "title": "Revenue", "value": "200.000 €", "tablet": 0, "phone": 1 },
-        { "id": 0, "type": "impressions", "title": "Impresions", "value": "200.000 €", "tablet": 2, "phone": 3 },
-        { "id": 1, "type": "visits", "title": "Visits", "value": "200.000 €", "tablet": 4, "phone": 5 }
+        { "id": 1, "type": "impressions", "title": "Impresions", "value": "200.000 €", "tablet": 2, "phone": 3 },
+        { "id": 2, "type": "visits", "title": "Visits", "value": "200.000 €", "tablet": 4, "phone": 5 }
     ],
     "devices": [
         { "id": 0, "type": "tablet", "percentage": ".6", "value": "120.000 €" },
