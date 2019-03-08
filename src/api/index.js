@@ -1,4 +1,10 @@
-import myAxios from './myAxios';
+import axios from 'axios';
+
+const BASE_URL = 'http://localhost:3000';
+
+const myAxios = axios.create({
+    baseURL: BASE_URL
+});
 
 export const getReports = () => {
     console.log(`getting reports info`);

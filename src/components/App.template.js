@@ -1,7 +1,7 @@
 export default () => {
 
     return `
-        <div id="root">
+        <div child class="grid-container">
         </div>
     `;
 }

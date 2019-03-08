@@ -1,0 +1,10 @@
+.hello {
+    color:grey
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 32px;
+    padding: 32px;
+    grid-template-columns: auto auto auto;
+}

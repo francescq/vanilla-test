@@ -1,6 +1,5 @@
-import * as d3 from 'd3';
 
-import './DataCard.css';
+import './DataCard.scss';
 import template from './DataCard.template';
 
 const playWithCircle = () => {
@@ -8,16 +7,15 @@ const playWithCircle = () => {
 };
 
 const DataContainer = (props) => {
+    const id=props.id;
+
     let dataContainer = document.createElement('div');
+    dataContainer.setAttribute("id",id);
+    dataContainer.setAttribute("type",props.type);
     
     dataContainer.insertAdjacentHTML("afterbegin", template(props));
     
     return dataContainer;
 }
-
-// const DataContainer = (props) => {
-//     return template(props);
-// }
-
 
 export default DataContainer;

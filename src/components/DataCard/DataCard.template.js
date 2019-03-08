@@ -1,21 +1,20 @@
 export default (props) => {
     return `
-        <div class="card-container">
-            <h1 class="header">${props.title}</h1>
-            <p>${props.value}</p>
-            <div id="timer">
-            <svg width="60" height="60">
-                <circle cx="40" cy="60" r="10"></circle>
-                <circle cx="40" cy="60" r="8"></circle>
-            </svg>
-            <span>
-                ${props.phone.value}
-                ${props.phone.percentage} %
-            </span>
-            <span>
-                ${props.tablet.value}
-                ${props.tablet.percentage} %
-            </span>
+        <div class="card-container theme-${props.type}">
+            <div class="header">
+                <div class="title">${props.title}</div>
+                <div class="value">${props.value}</div>
+            </div>
+            <div class="device tablet">
+                <div class="title">Tablet</div>
+                <span class="perc">${props.tablet.percentage} %</span>
+                <span class="value">${props.tablet.value}</span>                
+            </div>
+            <div class="device phone">
+                <div class="title">Smartphone</div>
+                <span class="perc">${props.phone.percentage} %</span>
+                <span class="value">${props.phone.value}</span>
+            </div>
         </div>
     `;
 }

@@ -24,10 +24,11 @@ const start = async () => {
     document.body.appendChild(app.render());
 
     const reports = await load();
-    document.body.removeChild(document.querySelector('#root'));
+    document.body.removeChild(document.getElementById(app.id));
 
     app = new App(reports);
     document.body.appendChild(app.render());
+    
     app.play();
 }
 start();
