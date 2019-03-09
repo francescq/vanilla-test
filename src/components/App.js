@@ -16,19 +16,15 @@ export default class App {
         element.insertAdjacentHTML("afterbegin", template());
 
         if(!this.reports || !this.reports.length) {
-            element.innerHTML = 'Loading...';
-        }else {                  
+            element.innerHTML = '<div>Loading...</div>';
+        } else {                  
             let childElement = element.querySelector('[child]');
             this.reports.map((report) => {
-                childElement.appendChild(DataCard(report));
+                const dataCard = DataCard(report)
+                childElement.appendChild(dataCard);
             });
         }
 
         return element;
-    }
-
-    play() {
-        var circle = d3.selectAll("circle");
-        circle.style("fill", "steelblue");
     }
 }

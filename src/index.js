@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import App from './components/App';
-import {getReports, getDevice} from './api';
+import {getReports, getDevice} from './api/jsonServerApi';
 
 console.log(process.env.NODE_ENV);
 
