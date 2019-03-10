@@ -1,7 +1,6 @@
 export default () => {
-
-    return `
+  return `
         <div child class="grid-container">
         </div>
     `;
-}
+};
