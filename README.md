@@ -10,7 +10,12 @@ The application:
 * App is rendered again with the data
 
 # Setup
-Installation
+Get it
+```
+git clone git@github.com:francescq/vanilla-test.git
+cd vanilla-test
+```
+Install
 ```
 npm install
 npm install -g json-server
