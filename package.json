@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --watch",
     "watch": "webpack --watch",
-    "start": "concurrently --kill-others \"webpack-dev-server --open --config webpack.dev.js\" \"json-server --watch ./src/server/db.json\"",
+    "start": "concurrently --kill-others \"webpack-dev-server --open --config webpack.dev.js\" \"json-server --watch ./server/db.json\"",
     "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],

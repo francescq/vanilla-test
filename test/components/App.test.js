@@ -1,5 +1,5 @@
 import App from "../../src/components/App";
-import db from "../../src/server/db.json";
+import db from "../../server/db.json";
 
 describe("App", () => {
   test("should have id root", () => {
