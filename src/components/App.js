@@ -1,3 +1,5 @@
+import Glide from '@glidejs/glide'
+
 import './App.css';
 
 import DataCard from './DataCard/DataCard';
@@ -10,9 +12,11 @@ export default class App {
         this.id='app';
     }
 
-    render() {
+    render(){
+        const id='app';
+        
         let element = document.createElement('div');
-        element.setAttribute('id',this.id);
+        element.setAttribute('id',id);
         element.insertAdjacentHTML("afterbegin", template());
 
         if(!this.reports || !this.reports.length) {
@@ -20,11 +24,15 @@ export default class App {
         } else {                  
             let childElement = element.querySelector('[child]');
             this.reports.map((report) => {
-                const dataCard = DataCard(report)
+                const dataCard = DataCard(report);
                 childElement.appendChild(dataCard);
             });
         }
 
         return element;
+    }
+
+    slider() {
+        new Glide('.glide').mount();
     }
 }

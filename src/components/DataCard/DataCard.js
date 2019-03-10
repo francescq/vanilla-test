@@ -5,8 +5,8 @@ import template from './DataCard.template';
 const DataContainer = (props) => {
     const id=props.id;
 
-    let dataContainer = document.createElement('div');
-    dataContainer.setAttribute("id",id);
+    let dataContainer = document.createElement('li');
+    dataContainer.setAttribute("class",'glide__slide');
     
     dataContainer.insertAdjacentHTML("afterbegin", template(props));
     

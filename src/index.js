@@ -18,6 +18,8 @@ const start = async () => {
 
     app = new App(reports);
     document.body.appendChild(app.render());
+
+    app.slider();
 }
 
 export default start;

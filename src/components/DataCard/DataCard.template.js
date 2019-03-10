@@ -1,5 +1,6 @@
 export default (props) => {
     return `
+    
         <div class="card-container theme-${props.type}">
             <div class="header">
                 <div class="title">${props.title}</div>
