@@ -2,7 +2,7 @@
   "name": "marpheel",
   "version": "1.0.0",
   "description": "",
-  "private": true,
+  "private": false,
   "scripts": {
     "test": "jest --watch",
     "watch": "webpack --watch",
@@ -10,7 +10,7 @@
     "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "francescq@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "@babel/polyfill": "^7.2.5",
