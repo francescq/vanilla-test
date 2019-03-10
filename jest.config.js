@@ -13,9 +13,4 @@ module.exports = {
   "moduleNameMapper": {
     "\\.(scss|css)$": "identity-obj-proxy"
   }
-  // },
-  //   "globalSetup": "jest-browser/setup",
-  //   "globalTeardown": "jest-browser/teardown",
-  //   "testEnvironment": "jest-browser"
-  
 };

@@ -1,26 +1,26 @@
 import mockAxios from 'axios';
-import {getReports, getDevice, baseURL} from '../../src/api/jsonServerApi';
+import JsonServerApi from '../../src/api/JsonServerApi';
 import "@babel/polyfill";
 
+let api;
+
 describe('Api', () =>{
+
     beforeEach(() => {
         mockAxios.get.mockResolvedValue({'foo':'bar'});
-    });
-
-    test('should initialise baseURL', () => {
-        expect(mockAxios.create).toBeCalledWith({baseURL: 'http://localhost:3000'});
+        api = new JsonServerApi(mockAxios);
     });
     
     describe('getReports', () => {
 
         test('should have been called with and id and url', async () => {
-            await getReports();
+            await api.getReports();
             
             expect(mockAxios.get).toBeCalledWith('/reports');
         });
 
         test('should answer with reports in db', async () => {
-            const reports = await getReports();
+            const reports = await api.getReports();
 
             expect(reports).toEqual({'foo':'bar'});
         });
@@ -29,13 +29,13 @@ describe('Api', () =>{
 
     describe('getDevice', () => {
         test('should have been called with and id and url', async () => {
-            await getDevice('foo');
+            await api.getDevice('foo');
             
             expect(mockAxios.get).toBeCalledWith('/devices/foo');
         });
 
         test('should answer with device report in db', async () => {
-            const reports = await getDevice();
+            const reports = await api.getDevice();
 
             expect({'foo': 'bar'}).toEqual(reports);
         });
