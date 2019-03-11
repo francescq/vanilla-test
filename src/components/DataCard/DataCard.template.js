@@ -2,8 +2,11 @@ export default props => {
   return `
         <div class="card-container theme-${props.type}">
             <div class="header">
-                <div class="title">${props.title}</div>
+                <div class="title">${
+                  props.title ? props.title.toUpperCase() : ""
+                }</div>
                 <div class="value">${props.value}</div>
+                <div timer=${props.id} class="header"></div>
             </div>
             <div class="device tablet">
                 <div class="title">Tablet</div>

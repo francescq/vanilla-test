@@ -7,23 +7,24 @@ export default class App {
   constructor(reports) {
     this.reports = reports;
     this.id = "app";
+
+    this.element = document.createElement("div");
+    this.element.setAttribute("id", this.id);
   }
 
   render() {
-    let element = document.createElement("div");
-    element.setAttribute("id", this.id);
-    element.insertAdjacentHTML("afterbegin", template());
+    this.element.insertAdjacentHTML("afterbegin", template());
 
     if (!this.reports || !this.reports.length) {
-      element.innerHTML = "<div>Loading...</div>";
+      this.element.innerHTML = "<div>Loading...</div>";
     } else {
-      let childElement = element.querySelector("[child]");
+      let childElement = this.element.querySelector("[child]");
       this.reports.map(report => {
-        const dataCard = DataCard(report);
-        childElement.appendChild(dataCard);
+        const dataCard = new DataCard(report);
+        childElement.appendChild(dataCard.render());
       });
     }
 
-    return element;
+    return this.element;
   }
 }

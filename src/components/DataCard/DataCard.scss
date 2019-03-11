@@ -59,11 +59,16 @@ $heading-Light: #cecece;
 
   .title {
     color: $heading-Light;
+    top: 63px;
+    font-size: 12px;
+    position: relative;
   }
 
   .value {
     color: $heading-Dark;
-    font-size: 20px;
+    font-size: 18px;
+    top: 63px;
+    position: relative;
   }
 }
 
