@@ -2,7 +2,7 @@
 VannillaJS application simulating a reporting app.
 It does not use any framework neither dom manipulatin tool.
 
-It simulates a backend using json-server, a small server that answers with the content of a json file.
+It simulates a backend using json-server, a small server that answers with the content of a json file. 
 
 The application:
 * App renders with no data loaded yet
@@ -34,4 +34,5 @@ npm start
 * axios
 * jest + babel
 * json-server
+* DashTimer https://github.com/brucemcpherson/DashTimer
 * scss
